@@ -10,7 +10,7 @@ storage = chu_hoa + chu_thuong + so + dac_biet
 
 mat_khau = ""
 
-for i in range(password_length):
+for _ in range(password_length):
     ky_tu = random.choice(storage)
     mat_khau = mat_khau + ky_tu
 
