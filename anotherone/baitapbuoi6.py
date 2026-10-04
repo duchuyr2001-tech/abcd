@@ -1,0 +1,40 @@
+data = input("Hay dien thong tin: ")
+p1 = data.find("|")
+p2 = data.find("|", p1 + 1)
+p3 = data.find("|", p2 + 1)
+p4 = data.find("|", p3 + 1)
+p5 = data.find("|", p4 + 1)
+player = data[:p1].strip().upper()
+character = data[p1+1:p2].strip().upper()
+city = data[p2+1:p3].strip().title()
+code = data[p3+1:p4].strip().upper()
+quote = data[p4+1:].strip().upper()
+player1 = player[0:5]
+player2 = player[5:10]
+player3 = player[9:15]
+
+length_ten = len(player)
+length_character = len(character)
+
+
+
+print("╔══════════════════════════════════════════╗")
+print("║            CHARACTER DATABASE            ╠ ")
+print("╠══════════════════════════════════════════╣")
+print(" PLAYER ")
+print(player)
+print(" CHARACTER ")
+print(character)
+print(" CITY ")
+print(city)
+print("╔══════════════════════════════════════════╗")
+print("║                STATISTICS                ║ ")
+print("╠══════════════════════════════════════════╣")
+print(f" Player length: {length_ten} ")
+print(f" Character length: {length_character}")
+print(f"\n Character first: {character[0:6]}")
+print(f" Character second: {character[6:13]}")
+print(f"\nStudent year: {code[2:6]}")
+print(f" Student code: {code[6:12]}")
+print(" \nPLAYER TAG:" ,f" \n{player1[0] + player2[0] + player3[0]}_{character}")
+print(f"\nQUOTE: \n{quote}")
